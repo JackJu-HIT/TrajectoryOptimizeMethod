@@ -6,3 +6,10 @@ mkdir build
 cd build
 cmake ..
 make
+
+# 效果
+
+
+<p align="center">
+  <img src="https://github.com/JackJu-HIT/TrajectoryOptimizeMethod/blob/master/result.png" width = "600" height = "300"/>
+</p> -->
