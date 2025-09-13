@@ -50,10 +50,8 @@ namespace teb_local_planner
     {
         g2o::Factory* factory = g2o::Factory::instance();
         factory->registerType("VERTEX_POINT2D", new g2o::HyperGraphElementCreator<VertexPoint2D>);
-        // factory->registerType("EDGE_SOFT_CONSTRAINT", new g2o::HyperGraphElementCreator<EdgeSoftConstraint>);
-        // factory->registerType("EDGE_DISTANCE_CONSTRAINT", new g2o::HyperGraphElementCreator<EdgeDistanceConstraint>);
         factory->registerType("EDGE_obstacle_CONSTRAINT", new g2o::HyperGraphElementCreator<EdgeObstacleConstraint>);
-        factory->registerType("EDGE_via_point_CONSTRAINT", new g2o::HyperGraphElementCreator<EdgeObstacleConstraint>);
+        factory->registerType("EDGE_via_point_CONSTRAINT", new g2o::HyperGraphElementCreator<EdgeViaPointConstraint>);
     }
 
     void plannerManager::setpathInfo(std::vector<tools::pathInfo>& path)
